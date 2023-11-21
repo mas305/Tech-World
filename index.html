@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta n ame="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <title>Tech World</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light nav">
+    <div class="container-fluid cont1">
+
+      <div class="title d-flex ">
+        <img class="navbar-brand left-logo" src="images/logo.png" draggable="false" width="60px" height="100%" alt="">
+        <h1>Tech World</h1>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navi" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 navi">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Great persons</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Achievements</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- <img class="navbar-brand logo" src="images/logo.png" width="60px" alt=""> -->
+        <form class="d-flex form">
+          <button class="btn btn-outline-success btn-signup" data-bs-toggle="modal" data-bs-target="#login"
+            type="submit">Login</button>
+          <button class="btn btn-outline-info btn-signup" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            type="submit">Sign
+            up</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Modal -->
+  <div class="modal fade  " id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login Form</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-floating mb-4">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label class="holder" for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label class="holder" for="floatingPassword">Password</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger close-btn" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success save-btn">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- sign up Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sgin up Form</h5>
+          <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form class="row g-3 needs-validation form1" novalidate>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+              <label for="validationCustom01" class="form-label">First name</label>
+              <input type="text" class="form-control" id="validationCustom01" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+              <label for="validationCustom02" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="validationCustom02" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+              <label for="validationCustomUsername" class="form-label">Username</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="text" class="form-control" id="validationCustomUsername" placeholder="user name"
+                  aria-describedby="inputGroupPrepend" required>
+
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
+            </div>
+
+          </form>
+          <!-- --------- -->
+          <div class="form-floating mb-3">
+
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label class="holder" for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label class="holder" for="floatingPassword">Password</label>
+          </div>
+        </div>
+        <div class="mb-3 choose-img">
+          <label for="formFile" class="form-label">Enter your image</label>
+          <input class="form-control" type="file" id="formFile">
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+          <label class="form-check-label" for="autoSizingCheck">
+            Remember me
+          </label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success save-btn">Sign UP</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- cars   -->
+  <!-- class="carousel slide cars-img" -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/kv-p60-pro.jpg" class="d-block w-100 bgimg" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/drown.jpg" class="d-block w-100 bgimg" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/bg3.jpg" class="d-block w-100 bgimg" alt="...">
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <aside class="aside">
+    <div class="container aside-div ">
+      <div class="aside-icons d-flex flex-lg-column ">
+        <a href=""> <img class="iconsss" src="images/facebook (1).png" width="20px" alt=""></a>
+        <a href=""> <img class="iconsss" src="images/instagram (1).png" width="20px" alt=""></a>
+        <a href=""> <img class="iconsss" src="images/whatsapp.png" width="20px" alt=""></a>
+        <a href=""> <img class="iconsss" src="images/linkedin.png" width="20px" alt=""></a>
+
+      </div>
+    </div>
+  </aside>
+
+
+
+
+  <div class="container-fluid div2">
+    <div class="container div2-container">
+      <div class="container div2-content">
+        <div class="container content-text">
+          <p>Tech World</p>
+          <h2>Bill Gates</h2>
+          <p>See why leading organizations rely on MasterClass for learning & development.</p>
+
+        </div>
+      </div>
+      <div class="div2-img">
+        <img class="image img-thumbnail" src="images/billlge.jpg" draggable="false" alt="">
+      </div>
+    </div>
+    <div class="container div2-container">
+      <div class="container div2-content">
+        <div class="container content-text">
+          <p>Tech World</p>
+          <h2>Steve Jobs</h2>
+          <p>See why leading organizations rely on MasterClass for learning & development.</p>
+
+        </div>
+      </div>
+      <div class="div2-img">
+        <img class="image img-thumbnail" src="images/steve-jobs-wallpaper-iphone-4s-ipod-touch-55.jpg" draggable="false"
+          alt="">
+      </div>
+    </div>
+    <div class="container div2-container">
+      <div class="container div2-content">
+        <div class="container content-text">
+          <p>Tech World</p>
+          <h2>Elon Musk</h2>
+          <p>See why leading organizations rely on MasterClass for learning & development.</p>
+
+        </div>
+      </div>
+      <div class="div2-img">
+        <img class="image img-thumbnail" src="images/elon3.jpeg" draggable="false" alt="">
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+  <div class="container link-div">
+    <div class="row row-link">
+      <div class="col-lg-3 col-md-6 col-sm-12  col-link">
+        <div class="card card-link" style="width: 18rem;">
+          <div class="img-frame">
+            <img src="images/apple.jpg" class="card-img-top" height="350px" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">IPhone</h5>
+            <p class="card-text">iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS
+              mobile operating system. </p>
+            <a href="https://en.wikipedia.org/wiki/IPhone" target="_blank" class="btn">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12  col-link">
+        <div class="card card-link" style="width: 18rem;">
+          <div class="img-frame">
+            <img src="images/sam1.jpg" class="card-img-top" alt="..." height="350px">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Samsung</h5>
+            <p class="card-text">Samsung Group,[3] or simply Samsung (stylized as SΛMSUNG), is a South Korean
+              multinational .</p>
+            <a href="https://en.wikipedia.org/wiki/SAMSUNG" target="_blank" class="btn">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12  col-link">
+        <div class="card card-link" style="width: 18rem;">
+          <div class="img-frame">
+            <img src="images/mate-series-card-2.jpg" class="card-img-top" alt="..." height="350px">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Huawei</h5>
+            <p class="card-text">Huawei Technologies Co., Ltd. is a Chinese multinational technology corporation
+              headquartered .</p>
+            <a href="https://en.wikipedia.org/wiki/Huawei" target="_blank" class="btn">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12  col">
+        <div class="card card-link" style="width: 18rem;">
+          <div class="img-frame">
+            <img src="images/last.jpg" class="card-img-top" alt="..." height="350px">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Redmi</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="https://en.wikipedia.org/wiki/Redmi" target="_blank" class="btn">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container div3">
+    <h2 class="div3-title">Bill Gates Achievements</h2>
+    <div class="row row-div3">
+      <div class="col-lg-6 col-div3 col-over">
+        <img class="bill-img" src="images/billlge.jpg" width="100%" alt="">
+        <!-- <img class="bill-img" class="img class="bill-img"-overlay" src="images/billlge.jpg" width="50px" height="150px" alt=""> -->
+      </div>
+      <div class="col-lg-3 col-div3">
+        <img class="bill-img" src="images/bill44.jpg" width="100%" alt="">
+        <div class="row">
+          <div class="col">
+            <img class="bill-img pic-under" src="images/bill2.jpeg" width="100%" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-div3">
+        <img class="bill-img" src="images/bill3.jpeg" width="100%" alt="">
+        <div class="row ">
+          <div class="col">
+            <img class="bill-img pic-under" src="images/bil1.jpeg" width="100%" alt="">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br><br><br><br>
+
+
+  <div class="container div4">
+    <div class="card mb-3 div4-card">
+      <div class="row g-0">
+        <div class="col-lg-3 card-col-div4">
+          <div class="div4-text d-flex">
+            <div class="text-title">
+              <h5 class="card-title">Air Pods</h5>
+              <div class="title-line"></div>
+            </div>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="col-lg-6 card-img-col">
+          <img src="images/airposd boy (2).jpg" class="img-fluid rounded-start div4-card-img" alt="...">
+        </div>
+        <div class="col-lg-3 card-col-div4">
+          <div class="div4-btn d-flex flex-lg-column">
+            <button class="btn div4-btn-item">buy</button>
+            <button class="btn div4-btn-item">add to cart</button>
+            <button class="btn div4-btn-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1"
+              aria-controls="offcanvasRight">show more</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3 div4-card">
+      <div class="row g-0">
+        <div class="col-lg-3 card-col-div4">
+          <div class="div4-text d-flex">
+            <div class="text-title">
+              <h5 class="card-title">Smart Watch</h5>
+              <div class="title-line"></div>
+            </div>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="col-lg-6 card-img-col">
+          <img src="images/apple watch2.jpg" class="img-fluid rounded-start div4-card-img" alt="...">
+        </div>
+        <div class="col-lg-3 card-col-div4">
+          <div class="div4-btn d-flex flex-lg-column">
+            <button class="btn div4-btn-item">buy</button>
+            <button class="btn div4-btn-item">add to cart</button>
+            <button class="btn div4-btn-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2"
+              aria-controls="offcanvasRight">show more</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3 div4-card">
+      <div class="row g-0">
+        <div class="col-lg-3 card-col-div4">
+          <div class="div4-text d-flex">
+            <div class="text-title">
+              <h5 class="card-title">E Pencil</h5>
+              <div class="title-line"></div>
+            </div>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="col-lg-6 card-img-col">
+          <img src="images/pencil.jpg" class="img-fluid rounded-start div4-card-img" alt="...">
+        </div>
+        <div class="col-lg-3 card-col-div4">
+          <div class="div4-btn d-flex flex-lg-column">
+            <button class="btn div4-btn-item">buy</button>
+            <button class="btn div4-btn-item">add to cart</button>
+            <button class="btn div4-btn-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight3"
+              aria-controls="offcanvasRight">show more</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- pencil -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight3" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasRightLabel">pencil</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <img class="offcanvas-img img-thumbnail" src="images/offcanvas img (1).jpg" alt="">
+      <img class="offcanvas-img img-thumbnail" src="images/offcanvas img (2).jpg" alt="">
+      <img class="offcanvas-img img-thumbnail" src="images/offcanvas img (3).jpg" alt="">
+      <img class="offcanvas-img img-thumbnail" src="images/offcanvas img (4).jpg" alt="">
+      <img class="offcanvas-img img-thumbnail" src="images/offcanvas img (5).jpg" alt="">
+    </div>
+  </div>
+  <!-- smart watch -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasRightLabel">Smart Watch</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <img class="offcanvas-img img-thumbnail" src="images/smartwatch (1).jpg" alt="">
+      <img class="offcanvas-img img-thumbnail" src="images/smartwatch (2).jpg" alt="">
+      <img class="offcanvas-img img-thumbnail" src="images/smartwatch (3).jpg" alt="">
+      <img class="offcanvas-img img-thumbnail" src="images/smartwatch (4).jpg" alt="">
+      <img class="offcanvas-img img-thumbnail" src="images/smartwatch (5).jpg" alt="">
+
+    </div>
+  </div>
+  <!-- airpods -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight1" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasRightLabel">airpods</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <img class="offcanvas-img img-thumbnail" src="images/airpods (5).jpg" alt="">
+      <img class="offcanvas-img img-thumbnail" src="images/airpods (1).jpg" alt="">
+      <img class="offcanvas-img img-thumbnail" src="images/airpods (2).jpg" alt="">
+      <img class="offcanvas-img img-thumbnail" src="images/airpods (3).jpg" alt="">
+      <img class="offcanvas-img img-thumbnail" src="images/airpods (4).jpg" alt="">
+
+    </div>
+  </div>
+
+
+  <div class="container div5">
+    <div class="row row-div5">
+      <div class="col col-lg-4 col-md-12 col-div5">
+        <div class="div5-img img1">
+          <div class="overlay-div5">
+            <div class="card div5-card">
+              <div class="card-body">
+                <h5 class="card-title">All thanks and appreciation</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+              </div>
+              <img src="images/billlge.jpg" class="card-img-bottom img-thumbnail inside-img" alt="...">
+              <h6 class="">bill gates</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col col-lg-4 col-md-12 col-div5">
+        <div class="div5-img img2">
+          <div class="overlay-div5">
+            <div class="card div5-card">
+              <div class="card-body">
+                <h5 class="card-title">All thanks and appreciation</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+              </div>
+              <img src="images/elon3.jpeg" class="card-img-bottom img-thumbnail inside-img" alt="...">
+              <h6 class="">Elon Musk</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-4 col-md-12 col-div5">
+        <div class="div5-img img3">
+          <div class="overlay-div5">
+            <div class="card div5-card">
+              <div class="card-body">
+                <h5 class="card-title">All thanks and appreciation</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+              </div>
+              <img src="images/steve-jobs-wallpaper-iphone-4s-ipod-touch-55.jpg"
+                class="card-img-bottom img-thumbnail inside-img" alt="...">
+              <h6 class="">Steve Jobs</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- <div class="container div-img">
+  </div> -->
+
+  <div class="container accordion accordion-flush accordion-div" id="accordionFlushExample">
+    <h4>Popular Questions</h4>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          questions 1
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+          <code>.accordion-flush</code> class. This is the first item's accordion body.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          questions 2
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+          <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled
+          with some actual content.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          questions 3
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+          <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening
+          here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more
+          representative of how this would look in a real-world application.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer pt-5 pb-3 text-center text-lg-start position-relative">
+    <div class="row footer-row">
+      <div class="col-lg-3 col-md-12 footer-col">
+        <h4>Links</h4>
+        <ul>
+          <a href="">
+            <li>Home</li>
+          </a>
+          <a href="">
+            <li>Docs</li>
+          </a>
+          <a href="">
+            <li>Examples</li>
+          </a>
+          <a href="">
+            <li>Blog</li>
+          </a>
+          <a href="">
+            <li>Themes</li>
+          </a>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-12 footer-col">
+        <h4>Guides</h4>
+        <ul>
+          <a href="">
+            <li>Getting started</li>
+          </a>
+          <a href="">
+            <li>Starter template</li>
+          </a>
+          <a href="">
+            <li>Webpack</li>
+          </a>
+          <a href="">
+            <li>Parcel</li>
+          </a>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-12 footer-col">
+        <h4>Projects</h4>
+        <ul>
+          <a href="">
+            <li>Icons</li>
+          </a>
+          <a href="">
+            <li>Discussions</li>
+          </a>
+          <a href="">
+            <li>npm starter</li>
+          </a>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-12 footer-col">
+        <h4>Social Media</h4>
+        <div class="social-icons">
+          <a class="icons-img" href=""><img src="images/facebook (2).png" width="60px" alt=""></a>
+          <a class="icons-img" href=""><img src="images/instagram (2).png" width="60px" alt=""></a>
+          <a class="icons-img" href=""><img src="images/linkedin (1).png" width="60px" alt=""></a>
+          <a class="icons-img" href=""><img src="images/whatsapp (1).png" width="60px" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="rights">
+      <h6>All Rights Reserved for MAS Design 2023 ©</h6>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="./js/bootstrap.min.js"></script>
+</body>
+
+
+
+</html>
